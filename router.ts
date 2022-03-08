@@ -1,8 +1,8 @@
-import { Router } from "https://deno.land/x/oak/mod.ts";
+import { Router } from "https://deno.land/x/oak@v10.4.0/mod.ts";
 import { echo } from "./controllers/echo.ts";
 export const router = new Router();
 
-router.get("/", (ctx, next) => {
+router.get("/", (ctx) => {
   // handle the GET endpoint here
   ctx.response.body = "Hello World!";
 });
